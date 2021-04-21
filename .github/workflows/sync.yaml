@@ -33,3 +33,7 @@ jobs:
         docker pull k8s.gcr.io/sig-storage/csi-snapshotter:v3.0.2
         docker tag k8s.gcr.io/sig-storage/csi-snapshotter:v3.0.2 dcarea/csi-snapshotter:v3.0.2
         docker push dcarea/csi-snapshotter:v3.0.2
+
+        docker pull k8s.gcr.io/sig-storage/csi-node-driver-registrar:v2.0.1
+        docker tag k8s.gcr.io/sig-storage/csi-node-driver-registrar:v2.0.1 dcarea/csi-node-driver-registrar:v2.0.1
+        docker push dcarea/csi-node-driver-registrar:v2.0.1
