@@ -14,11 +14,22 @@ jobs:
     - name: Login to GitHub Container Registry
       uses: docker/login-action@v1
       with:
-        registry: ghcr.io
-        username: ${{ github.repository_owner }}
-        password: ${{ secrets.CR_PAT }}
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: Push Image
       run: |
         docker pull k8s.gcr.io/sig-storage/csi-attacher:v3.0.2
-        docker tag k8s.gcr.io/sig-storage/csi-attacher:v3.0.2 ghcr.io/dcarea/csi-attacher:v3.0.2
-        docker push ghcr.io/dcarea/csi-attacher:v3.0.2
+        docker tag k8s.gcr.io/sig-storage/csi-attacher:v3.0.2 dcarea/csi-attacher:v3.0.2
+        docker push dcarea/csi-attacher:v3.0.2
+
+        docker pull k8s.gcr.io/sig-storage/csi-provisioner:v2.0.4
+        docker tag k8s.gcr.io/sig-storage/csi-provisioner:v2.0.4 dcarea/csi-provisioner:v2.0.4
+        docker push dcarea/csi-provisioner:v2.0.4
+
+        docker pull k8s.gcr.io/sig-storage/csi-resizer:v1.0.1
+        docker tag k8s.gcr.io/sig-storage/csi-resizer:v1.0.1 dcarea/csi-resizer:v1.0.1
+        docker push dcarea/csi-resizer:v1.0.1
+
+        docker pull k8s.gcr.io/sig-storage/csi-snapshotter:v3.0.2
+        docker tag k8s.gcr.io/sig-storage/csi-snapshotter:v3.0.2 dcarea/csi-snapshotter:v3.0.2
+        docker push dcarea/csi-snapshotter:v3.0.2
