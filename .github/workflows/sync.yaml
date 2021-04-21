@@ -21,3 +21,4 @@ jobs:
       run: |
         docker pull k8s.gcr.io/sig-storage/csi-attacher:v3.0.2
         docker tag k8s.gcr.io/sig-storage/csi-attacher:v3.0.2 ghcr.io/dcarea/csi-attacher:v3.0.2
+        docker push ghcr.io/dcarea/csi-attacher:v3.0.2
