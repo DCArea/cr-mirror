@@ -37,3 +37,11 @@ jobs:
         docker pull k8s.gcr.io/sig-storage/csi-node-driver-registrar:v2.0.1
         docker tag k8s.gcr.io/sig-storage/csi-node-driver-registrar:v2.0.1 dcarea/csi-node-driver-registrar:v2.0.1
         docker push dcarea/csi-node-driver-registrar:v2.0.1
+
+        docker pull k8s.gcr.io/ingress-nginx/controller:v0.45.0
+        docker tag k8s.gcr.io/ingress-nginx/controller:v0.45.0 dcarea/ingress-nginx-controller:v0.45.0
+        docker push dcarea/ingress-nginx-controller:v0.45.0
+
+        docker pull k8s.gcr.io/defaultbackend-amd64:1.5
+        docker tag k8s.gcr.io/defaultbackend-amd64:1.5 dcarea/defaultbackend-amd64:1.5
+        docker push dcarea/defaultbackend-amd64:1.5
