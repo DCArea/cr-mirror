@@ -48,4 +48,4 @@ jobs:
 
         docker pull gcr.io/kaniko-project/executor:latest
         docker tag gcr.io/kaniko-project/executor:latest dcarea/kaniko-executor:latest
-        docker pull dcarea/kaniko-executor:latest
+        docker push dcarea/kaniko-executor:latest
