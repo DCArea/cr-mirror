@@ -46,10 +46,14 @@ jobs:
         # docker tag k8s.gcr.io/defaultbackend-amd64:1.5 dcarea/defaultbackend-amd64:1.5
         # docker push dcarea/defaultbackend-amd64:1.5
 
-        docker pull gcr.io/kaniko-project/executor:debug
-        docker tag gcr.io/kaniko-project/executor:debug dcarea/kaniko-executor:debug
-        docker push dcarea/kaniko-executor:debug
+        # docker pull gcr.io/kaniko-project/executor:debug
+        # docker tag gcr.io/kaniko-project/executor:debug dcarea/kaniko-executor:debug
+        # docker push dcarea/kaniko-executor:debug
 
-        docker pull k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0
-        docker tag k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0 dcarea/kube-state-metrics:v2.0.0
-        docker push dcarea/kube-state-metrics:v2.0.0
+        # docker pull k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0
+        # docker tag k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0 dcarea/kube-state-metrics:v2.0.0
+        # docker push dcarea/kube-state-metrics:v2.0.0
+
+        docker pull docker.elastic.co/elasticsearch/elasticsearch:7.14.0
+        docker tag docker.elastic.co/elasticsearch/elasticsearch:7.14.0 dcarea/elasticsearch:7.14.0
+        docker push dcarea/elasticsearch:7.14.0
