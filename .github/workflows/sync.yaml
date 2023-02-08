@@ -59,4 +59,7 @@ jobs:
         docker push dcarea/elasticsearch:7.14.0
         
         docker pull mcr.microsoft.com/dotnet/sdk:6.0
-        docker pull mcr.microsoft.com/dotnet/sdk:2.2
+        docker pull mcr.microsoft.com/dotnet/core/sdk:2.2
+        docker tag mcr.microsoft.com/dotnet/core/sdk:2.2 dcarea/dotnet-core-sdk:2.2
+        docker push dcarea/dotnet-core-sdk:2.2
+
