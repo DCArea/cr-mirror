@@ -18,7 +18,7 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: Push Image
       run: |
-        docker pull gcr.io/google_containers/pause:3.2
-        docker tag gcr.io/google_containers/pause:3.2 dcarea/google_containers_pause:3.2
-        docker push dcarea/google_containers_pause:3.2
+        docker pull ghcr.io/linkerd/dev:v39-rust-musl
+        docker tag ghcr.io/linkerd/dev:v39-rust-musl dcarea/linkerd_dev:v39-rust-musl
+        docker push dcarea/linkerd_dev:v39-rust-musl
 
