@@ -16,9 +16,14 @@ jobs:
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
-    - name: Push Image
+    # - name: Push Image
+    #   run: |
+    #     docker pull ghcr.io/linkerd/dev:v39-rust-musl
+    #     docker tag ghcr.io/linkerd/dev:v39-rust-musl dcarea/linkerd_dev:v39-rust-musl
+    #     docker push dcarea/linkerd_dev:v39-rust-musl
+
+    - name: Build Image
       run: |
-        docker pull ghcr.io/linkerd/dev:v39-rust-musl
-        docker tag ghcr.io/linkerd/dev:v39-rust-musl dcarea/linkerd_dev:v39-rust-musl
-        docker push dcarea/linkerd_dev:v39-rust-musl
+        docker build -t dcarea/dotnet-sdk-678:v1 -f ./images/Dockerfile.dotnetsdk678 .
+        docker push dcarea/dotnet-sdk-678:v1
 
