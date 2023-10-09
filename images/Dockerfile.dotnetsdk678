@@ -13,4 +13,4 @@ RUN ./dotnet-install.sh -Version 6.0.413
 RUN ./dotnet-install.sh -Version 7.0.401
 RUN ./dotnet-install.sh -Version 8.0.100-rc.1.23455.8
 
-RUN PATH="$PATH:/root/.dotnet"
+ENV PATH="${PATH}:/root/.dotnet"
