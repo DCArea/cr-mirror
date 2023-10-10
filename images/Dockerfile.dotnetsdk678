@@ -15,7 +15,7 @@ RUN apk add --upgrade --no-cache \
         libssl3 \
         libstdc++6 \
         tzdata \
-        zlib1g \
+        zlib1g 
 
 RUN curl -o dotnet-install.sh https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh
 
