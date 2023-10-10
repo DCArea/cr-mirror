@@ -3,7 +3,19 @@ FROM amd64/alpine:3.18
 RUN apk add --upgrade --no-cache \
 		bash \
         ca-certificates-bundle \
-        curl 
+        curl \
+        git \
+        icu-data-full \
+        icu-libs \
+        tzdata
+		# .NET dependencies
+        libc6 \
+        libgcc-s1 \
+        libicu70 \
+        libssl3 \
+        libstdc++6 \
+        tzdata \
+        zlib1g \
 
 RUN curl -o dotnet-install.sh https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh
 
