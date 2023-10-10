@@ -7,7 +7,7 @@ RUN apk add --upgrade --no-cache \
         git \
         icu-data-full \
         icu-libs \
-        tzdata
+        tzdata \
 		# .NET dependencies
         libgcc \
         libssl3 \
