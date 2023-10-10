@@ -1,6 +1,7 @@
 FROM amd64/alpine:3.18
 
 RUN apk add --upgrade --no-cache \
+		bash \
         ca-certificates-bundle \
         curl 
 
