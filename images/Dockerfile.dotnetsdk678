@@ -9,13 +9,10 @@ RUN apk add --upgrade --no-cache \
         icu-libs \
         tzdata
 		# .NET dependencies
-        libc6 \
-        libgcc-s1 \
-        libicu70 \
+        libgcc \
         libssl3 \
-        libstdc++6 \
-        tzdata \
-        zlib1g 
+        libstdc++ \
+        zlib
 
 RUN curl -o dotnet-install.sh https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh
 
