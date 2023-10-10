@@ -1,9 +1,8 @@
-FROM ubuntu.azurecr.io/ubuntu:jammy
+FROM amd64/alpine:3.18
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-        ca-certificates \
-        curl
+RUN apk add --upgrade --no-cache \
+        ca-certificates-bundle \
+        curl \
 
 RUN curl -o dotnet-install.sh https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh
 

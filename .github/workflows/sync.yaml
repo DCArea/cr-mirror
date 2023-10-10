@@ -24,6 +24,6 @@ jobs:
 
     - name: Build Image
       run: |
-        docker build -t dcarea/dotnet-sdk-678:v3 -f ./images/Dockerfile.dotnetsdk678 .
-        docker push dcarea/dotnet-sdk-678:v3
+        docker build -t dcarea/dotnet-sdk-678:v4 -f ./images/Dockerfile.dotnetsdk678 .
+        docker push dcarea/dotnet-sdk-678:v4
 
