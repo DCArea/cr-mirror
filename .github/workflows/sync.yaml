@@ -24,6 +24,6 @@ jobs:
 
     - name: Build Image
       run: |
-        docker build -t dcarea/dotnet-aspnet-7-puppeteer:v1 -f ./images/Dockerfile.puppeteer .
-        docker push dcarea/dotnet-aspnet-7-puppeteer:v1
+        docker build -t dcarea/dotnet-sdk-678:v6 -f ./images/Dockerfile.dotnetsdk678 .
+        docker push dcarea/dotnet-sdk-678:v6
 
